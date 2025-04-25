@@ -10,13 +10,9 @@ class ChangePasswordController{
   final KNetworkApiServices networkApiServices = KNetworkApiServices();
   final storage = GetStorage();
 
-
   final TextEditingController currentPassController = TextEditingController();
   final TextEditingController newPassController = TextEditingController();
   final TextEditingController confirmPassController = TextEditingController();
-
-
-
 
   Future<void>changePassword(BuildContext context,String? currentPass,String? newPass,String? confirmPass) async {
 
@@ -34,6 +30,7 @@ class ChangePasswordController{
         const SnackBar(
           content: Text("Please new password"),
           backgroundColor: Colors.red,
+
         ),
       );
       return;
